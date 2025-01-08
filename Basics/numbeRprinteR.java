@@ -10,6 +10,4 @@ System.out.println("Here are the numbers: ");
 while (num<=number) {
     System.out.println(num);
     num++;
-}
-}   
-}
+}}}
