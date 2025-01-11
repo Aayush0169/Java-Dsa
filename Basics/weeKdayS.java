@@ -23,5 +23,6 @@ public class weeKdayS {
             default:System.out.println("Wrong Input");
                 break;
         }
+        s.close();
     }
 }

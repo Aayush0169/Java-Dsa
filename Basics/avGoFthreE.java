@@ -15,7 +15,7 @@ public class avGoFthreE {
         float sum=a+b+c;
         
         System.out.println("The average of given numbers is "+ sum/3);
-
+        num.close();
     }
 
 }

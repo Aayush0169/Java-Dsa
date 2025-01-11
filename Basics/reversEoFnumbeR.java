@@ -13,6 +13,6 @@ public class reversEoFnumbeR {
            rvrs=(rvrs*10)+last; 
         }
         System.out.println("Reversed  number is "+rvrs);
-        
+        sc.close();
     }
 }

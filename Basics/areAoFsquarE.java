@@ -9,6 +9,6 @@ public class areAoFsquarE {
         System.out.println("The properties of square are: ");
         System.out.println("Area: "+area+ "\n Perimeter: "+perimeter);
 
-
+        sc.close();
     }
 }

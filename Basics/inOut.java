@@ -5,17 +5,15 @@ public class inOut {
         // int b=456;
         // System.out.println(a+b);
         System.out.println("Enter Your name");
-        Scanner name=new Scanner(System.in);//"name is a variable"
-        String inName =name.nextLine();  //inputName is a variable
+        Scanner sc=new Scanner(System.in);
+        String inName =sc.nextLine();  //inputName is a variable
 
-        Scanner roll=new Scanner(System.in);
         System.out.println("Enter Your Roll no.");
-        int inRoll=roll.nextInt();
+        int inRoll=sc.nextInt();
 
-        Scanner cgpa=new Scanner(System.in);
         System.out.println("Enter Your CGPA: ");
-        float inCgpa=cgpa.nextFloat();
-
+        float inCgpa=sc.nextFloat();
+        sc.close();
         System.out.println("Hello "+inName+ "\nYour Roll No. is: "+inRoll+ "\nand your CGPA was: "+inCgpa+" This Year! ");
     }
     

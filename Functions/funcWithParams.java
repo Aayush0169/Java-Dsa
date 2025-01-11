@@ -13,5 +13,6 @@ public class funcWithParams {
         int sum=sum(a, b);
         System.out.println("The sum is: "+sum);
 
+        sc.close();
     }
 }

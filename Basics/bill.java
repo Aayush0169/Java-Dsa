@@ -27,6 +27,6 @@ public class bill {
 
         System.out.println("The Tax: "+tax); 
         System.out.println("The final bill is: "+(total+tax)); 
-
+        sc.close();
     }
 }
