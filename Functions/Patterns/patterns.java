@@ -9,7 +9,12 @@ public class patterns{
         }
     }
     public static void main(String[] args) {
-        triangle(4);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the number of lines: ");
+        int lines=sc.nextInt();
+        System.out.println();
+        triangle(lines);
+        sc.close();
     }
     
 }
