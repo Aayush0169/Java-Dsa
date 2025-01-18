@@ -8,7 +8,7 @@ public class binarYsearcH {
             if (nums[mid]==key) {
                 return mid;
             }
-             if(nums[mid]<key){
+             else if(nums[mid]<key){
                  start=mid+1;
                 }
                 else  {
@@ -22,7 +22,7 @@ public class binarYsearcH {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter he value of key you want to search in array: ");
         int key=sc.nextInt();
-        int nums[]={8,4,12,15,16,18,20,24,30};
+        int nums[]={8,4,12,15,16,18,20,24};
         int result=BinarYsearcH(nums,key);
         if (result>=0) {
             System.out.println("Key found at index: "+result);
