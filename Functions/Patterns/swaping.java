@@ -13,7 +13,13 @@ public class swaping {
         
     }
     public static void main(String[] args) {
-        swap2(12,25);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Print 1st number: ");
+        int a=sc.nextInt();
+        System.out.println("Print 2nd number: ");
+        int b=sc.nextInt();
+        swap2(a,b);
+        sc.close();
     }
 
 }
