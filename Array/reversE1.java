@@ -1,10 +1,11 @@
+import java.util.Scanner;
+
 public class reversE1 {
-    public static void main(String[] args) {
-        int arr1[]={5,2,1,4,8,3};
-        int length=arr1.length;
-        int revrseArr[]=new int[arr1.length];
+    public static void arrReverse(int arr[]){
+        int length=arr.length;
+        int revrseArr[]=new int[arr.length];
         for(int i=0;i<length;i++){
-            revrseArr[i] = arr1[length - 1 - i];
+            revrseArr[i] = arr[length - 1 - i];
         }
         System.out.print("[");
         for(int i=0;i<length;i++){
@@ -16,4 +17,30 @@ public class reversE1 {
         }
         System.out.print("]");
     }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the size of the array: ");
+        int size=sc.nextInt();
+        int arr[]=new int[size];
+
+        System.out.println("Enter values of array:");
+        for(int i=0;i<size;i++){
+            arr[i]=sc.nextInt();
+        }
+        System.out.println("Your array: ");
+        System.out.print("[");
+        for(int i=0;i<size;i++){
+            System.out.print(arr[i]);
+            if (i<(size-1)) {
+                System.out.print(",");
+                
+            }
+        }
+        System.out.println("]");
+
+        System.out.println("Reversed Array: ");
+        arrReverse(arr);
+        sc.close();
+
 }
+    }
