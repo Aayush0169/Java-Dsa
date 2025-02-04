@@ -1,5 +1,5 @@
 import java.util.*;
-public class patterns{
+public class starTriangle{
     public static void triangle(int n){
         for(int i=1;i<=n;i++){
             for(int j=1;j<=i;j++){
