@@ -1,4 +1,14 @@
+import java.util.Scanner;
+
 public class primE {
+    public static boolean isEven(int n){
+        if (n%2==0) {
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
     public static boolean prime(int n){
         if (n==2) {
             return true;
@@ -27,8 +37,33 @@ public static void printPrime(int x){
     }
 }
     public static void main(String[] args) {
-        // boolean result=prime(4);
-        // System.out.println(result);
-        printPrime(10);
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int num=sc.nextInt();
+        
+        //chceking if even
+        boolean res=isEven(num);
+        
+        if (res==true) {
+            System.out.println("The number "+num+" is an even number!");
+        }
+        else{
+            System.out.println("The number "+num+" is an odd number!");
+
+        }
+
+
+        //prime check
+        boolean result=prime(4);
+        if (result==true) {
+            System.out.println("The number "+num+" is a prime number!");
+        }
+        else{
+            System.out.println("The number "+num+" is not a prime number!");
+
+        }
+
+        //prinitng prime numbers under the given input
+        printPrime(num);
     }
 }
