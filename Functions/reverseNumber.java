@@ -16,6 +16,7 @@ public class reverseNumber {
         int num=sc.nextInt();
         int res=reverse(num);
         System.out.println("Reversed:\n "+res );
+        sc.close();
     }
     
 }
