@@ -17,6 +17,16 @@ public class reversE1 {
         }
         System.out.print("]");
     }
+
+    public static int reversE2(int arr[]){
+        int arr2[]=new int[arr.length];
+        int j=0;
+        for(int i=num.length-1;i>=0;i--){
+            arr2[j]=arr[i];
+            j++;
+        }
+        return arr2;
+    }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         System.out.println("Enter the size of the array: ");
