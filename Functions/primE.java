@@ -65,5 +65,6 @@ public static void printPrime(int x){
 
         //prinitng prime numbers under the given input
         printPrime(num);
+        sc.close();
     }
 }
