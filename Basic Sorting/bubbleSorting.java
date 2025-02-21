@@ -1,5 +1,12 @@
 import java.util.*;
 public class bubbleSorting {
+    //method for taking choice as input
+    public static int choice(){
+          Scanner sc=new Scanner(System.in);
+        System.out.println("Enter 1 for sorting in Ascending order 2 for Descending order: ");
+        int num= sc.nextInt();
+        return num;
+      }
 
     //method for taing array as input
     public static int[] arrInput(){
@@ -47,17 +54,34 @@ public class bubbleSorting {
                     }
                 }
     }
+    public static void bubbleSort1(int arr[]){
+        //sorting the array
+        for(int turn=0;turn<arr.length-1;turn++){
+            for(int j=0;j<arr.length-1-turn;j++){
 
-    public static void main(String[] args)
-     {
-        //array as input
-        int arr[]=arrInput();
+                if (arr[j]<arr[j+1]) {
+                    int temp=arr[j];
+                    arr[j]=arr[j+1];
+                    arr[j+1]=temp;
+                }
 
-        //sortng array
+            }
+        }
+}
+public static void main(String[] args) {
+    // taking choice
+    int num = choice();
+    // array input
+    int arr[] = arrInput();
+    if (num == 1) {
         bubbleSort(arr);
-
-        //printing array
         printArr(arr);
-        
+    } else if (num == 2) {
+        bubbleSort1(arr);
+        printArr(arr);
+    } else {
+        System.out.println("Wrong Input!");
     }
+}
+
 }
