@@ -31,6 +31,6 @@ public class butterfly {
         }
     }
     public static void main(String[] args) {
-        butterflyStar(18);
+        butterflyStar(7);
     }
 }
