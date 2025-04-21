@@ -14,9 +14,15 @@ class StringQs{
             else if(direction=='w'){
                 x--;
             }
-            else (direction=='N'){
+            else {
                 x++;
             }
         }
+        int result=(int)Math.sqrt((x*x)+(y*y));
+        return result;
     } 
+    public static void main(String[] args) {
+        String path="WWENSENNEW";
+        System.out.println(shortestPath(path));
+    }
 }
