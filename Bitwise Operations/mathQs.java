@@ -40,7 +40,7 @@ public class mathQs {
 
         public static void main(String[] args) {
         int n=5;
-        // isPowerOf2(n);
+        isPowerOf2(n);
         System.out.println(expo(2, 25));
         int arr[]={4,5,6,7,5,4,6};
         System.out.println(findUnique(arr));
