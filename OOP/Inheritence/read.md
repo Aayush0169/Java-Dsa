@@ -1,0 +1,1 @@
+Single level and Multiviel Inheritences are supported only!
