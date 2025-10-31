@@ -19,6 +19,7 @@ public class Student {
     }
 }
 
+
 class init{
     public static void main(String[] args) {//various methods of instancing objects
         System.out.println("Student 1: ");
