@@ -12,10 +12,12 @@ class linkedList{
 
     public static Node head;
     public static Node tail;
+    public static int size;
 
     public void addFirst(int data){
         //add in start of the linkedlist
         Node newNode=new Node(data);
+        size++;
         if (head==null) {
             head=tail=newNode;
             return;
@@ -26,6 +28,7 @@ class linkedList{
     public void addLast(int data){
         //add in the last of the linked list
         Node newNode=new Node(data);
+        size++;
         if (head==null) {
             head=tail=newNode;
         }
@@ -42,7 +45,29 @@ class linkedList{
             System.out.print(temp.data+" ");
             temp=temp.next;
         }
-        // System.out.print("null");
+        // System.out.println();
+    }
+
+    public void addIndex(int index,int data){
+        if (index==0) {
+            addFirst(data);
+            return;
+        }
+        else if (index<0) {
+            System.out.println("invalid index!!");
+            return;
+        }
+
+        Node newNode= new Node(data);
+        size++;
+        Node temp = head;
+        int i=0;
+        while (i<index-1) {
+            temp=temp.next;
+            i++;
+        }
+        newNode.next=temp.next;
+        temp.next=newNode;
     }
 
     public static void main(String[] args) {
@@ -55,9 +80,13 @@ class linkedList{
         System.out.println();
         
         ll.addLast(17);
-        ll.print();
         System.out.println();
         ll.addLast(19);
+
+        
+        ll.addIndex(-2, 3);
+        System.out.println("after inseting in middle");
         ll.print();
+        System.out.println("size: "+ll.size);
     }
 }
