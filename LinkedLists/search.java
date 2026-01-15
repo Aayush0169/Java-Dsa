@@ -1,0 +1,79 @@
+public class search {
+        // defining node for linkedlist
+    public static class Node{
+        int data;
+        Node next;
+
+        public Node(int data){
+            this.data=data;
+            this.next=null;
+        }
+    }
+
+    public static Node head;
+    public static Node tail;
+    public static int size;
+
+    public void add(int data){
+        //add in the last of the linked list
+        Node newNode=new Node(data);
+        size++;
+        if (head==null) {
+            head=tail=newNode;
+        }
+        tail.next=newNode;
+        tail=newNode;
+    }
+
+
+    public void print(){
+        if (head==null) {
+            System.out.println("the list is empty!!");
+        }
+        Node temp=head;
+        while (temp!=null) {
+            System.out.print(temp.data+" ");
+            temp=temp.next;
+        }
+        // System.out.println();
+    }
+    public int itrSearch(int key){
+        Node temp=head;
+        int i=0;
+        while (temp !=null) {
+            if (temp.data==key) {
+                return i;
+            }
+            temp=temp.next;
+            i++;
+        }
+        return -1;
+    }
+    public int helpSearch(Node head,int key){
+        if (head==null) {
+            return -1;
+        }
+        if (head.data==key) {
+            return 0;
+        }
+        int index=helpSearch(head.next, key);
+        if (index==-1) {
+            return -1;
+        }
+        return index+1;
+    }
+    public int recrSearch(int key){
+        return helpSearch(head, key);
+    }
+
+    public static void main(String[] args) {
+        search ll=new search();
+        for(int i=1;i<=5;i++){
+            int data=i*3;
+            ll.add(data);
+        }
+        ll.print();
+        System.out.println();
+        System.out.println("index: "+ll.recrSearch(2));
+    }
+}
